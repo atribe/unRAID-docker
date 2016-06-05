@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Containers>
-<Beta>False</Beta>
+<Beta>True</Beta>
 <Category>Tools:</Category>
   <Name>apt-cacher-ng</Name>
   <Description>
