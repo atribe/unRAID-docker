@@ -11,10 +11,10 @@
   <Overview>
 	   Apt-Cacher NG is a caching proxy, specialized for package files from Linux distributors, primarily for Debian (and Debian based) distributions but not limited to those.
   </Overview>
-  <Support></Support>
-  <Registry></Registry>
-  <GitHub></GitHub>
-  <Repository></Repository>
+  <Support>https://github.com/atribe/unRAID-docker</Support>
+  <Registry>https://hub.docker.com/r/sameersbn/apt-cacher-ng/</Registry>
+  <GitHub>https://github.com/sameersbn/docker-apt-cacher-ng</GitHub>
+  <Repository>sameersbn/apt-cacher-ng</Repository>
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>
     <Networking>
