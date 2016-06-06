@@ -10,9 +10,9 @@
 	   Glances is a cross-platform curses-based system monitoring tool written in Python.
   </Overview>
   <Support>https://github.com/atribe/unRAID-docker</Support>
-  <Registry>https://hub.docker.com/r/nicolargo/glances/</Registry>
-  <GitHub>https://github.com/nicolargo/glances</GitHub>
-  <Repository>nicolargo/glances</Repository>
+  <Registry>https://hub.docker.com/r/atribe/glances/</Registry>
+  <GitHub>https://github.com/atribe/glances</GitHub>
+  <Repository>atribe/glances</Repository>
   <BindTime>true</BindTime>
   <Privileged>true</Privileged>
   <Networking>
