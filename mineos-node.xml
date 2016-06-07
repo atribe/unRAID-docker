@@ -24,9 +24,9 @@ This allows the front-end to provide system health, disk and memory usage, and l
 This has been tested on Debian, Ubuntu, ArchLinux, and FreeBSD and should work on all variants, Linux or BSD.
   </Overview>
   <Support>https://github.com/atribe/unRAID-docker</Support>
-  <Registry>https://hub.docker.com/r/jgfield/mineos-node/</Registry>
-  <GitHub>https://hub.docker.com/r/jgfield/mineos-node/</GitHub>
-  <Repository>jgfield/mineos-node</Repository>
+  <Registry>https://hub.docker.com/r/mjeries/mineos-node/</Registry>
+  <GitHub>https://github.com/mjeries/mineos-node</GitHub>
+  <Repository>hexparrot/mineos-node</Repository>
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>
     <Networking>
@@ -35,11 +35,6 @@ This has been tested on Debian, Ubuntu, ArchLinux, and FreeBSD and should work o
       <Port>
         <HostPort>8443</HostPort>
         <ContainerPort>8443</ContainerPort>
-        <Protocol>tcp</Protocol>
-      </Port>
-      <Port>
-        <HostPort>19132</HostPort>
-        <ContainerPort>19132</ContainerPort>
         <Protocol>tcp</Protocol>
       </Port>
       <Port>
@@ -61,11 +56,6 @@ This has been tested on Debian, Ubuntu, ArchLinux, and FreeBSD and should work o
     </Variable>
   </Environment>
   <Data>
-    <Volume>
-      <HostDir>/mnt/user/appdata/mineos-node</HostDir>
-      <ContainerDir>/var/games/minecraft</ContainerDir>
-      <Mode>rw</Mode>
-    </Volume>
   </Data>
   <WebUI>http://[IP]:[PORT:8443]/</WebUI>
   <Banner></Banner>
