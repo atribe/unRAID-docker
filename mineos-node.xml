@@ -12,7 +12,7 @@ This allows the front-end to provide system health, disk and memory usage, and l
 
 This has been tested on Debian, Ubuntu, ArchLinux, and FreeBSD and should work on all variants, Linux or BSD.[br][br]
     [b][u][span style='color: #E80000;']Configuration[/span][/u][/b][br]
-    [b]/var/cache/apt-cacher-ng[/b] This is where apt-cacher-ng stores its cached.[br]
+    [b]/var/games/minecraft[/b] This is where minecraft data is stored.[br]
   </Description>
   <Overview>
     MineOS is a server front-end to ease managing Minecraft administrative tasks.
