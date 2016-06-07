@@ -55,6 +55,10 @@ This has been tested on Debian, Ubuntu, ArchLinux, and FreeBSD and should work o
     </Publish>
   </Networking>
   <Environment>
+    <Variable>
+      <Name>PASSWORD</Name>
+      <Value>minecraft</Value>
+    </Variable>
   </Environment>
   <Data>
     <Volume>
