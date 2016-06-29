@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Containers>
+<Beta>True</Beta>
+<Category>Tools:</Category>
+  <Name>telegraf</Name>
+  <Description>
+	  Telegraf gathers metrics from your system and sends them to an InfluxDB server for storage. From InfluxDB you would typically use something like Grafana to plot the data.[br][br]
+    [b][u][span style='color: #E80000;']Configuration[/span][/u][/b][br]
+    [b]/var/run/docker.sock[/b] Location of your docker socket.[br]
+  </Description>
+  <Overview>
+	   Apt-Cacher NG is a caching proxy, specialized for package files from Linux distributors, primarily for Debian (and Debian based) distributions but not limited to those.
+  </Overview>
+  <Support>https://hub.docker.com/_/telegraf/</Support>
+  <Registry>https://hub.docker.com/_/telegraf/</Registry>
+  <Repository>telegraf</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>true</Privileged>
+  <Networking>
+    <Mode>bridge</Mode>
+  </Networking>
+  <Environment>
+  </Environment>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/telegraf</HostDir>
+      <ContainerDir>/etc/telegraf</ContainerDir>
+      <Mode>ro</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/proc</HostDir>
+      <ContainerDir>/mnt/proc</ContainerDir>
+      <Mode>ro</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt</HostDir>
+      <ContainerDir>/host</ContainerDir>
+      <Mode>ro</Mode>
+    </Volume>
+  </Data>
+  <Banner></Banner>
+  <Icon></Icon>
+  <ExtraParams></ExtraParams>
+</Containers>
