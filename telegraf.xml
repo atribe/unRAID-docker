@@ -7,6 +7,10 @@
 	  Telegraf gathers metrics from your system and sends them to an InfluxDB server for storage. From InfluxDB you would typically use something like Grafana to plot the data.[br][br]
     [b][u][span style='color: #E80000;']Configuration[/span][/u][/b][br]
     [b]/var/run/docker.sock[/b] Location of your docker socket.[br]
+    [b]/rootfs/proc<[/b] Location of your /proc directory.[br]
+    [b]/rootfs/etc[/b] Location of your /etc directory.[br]
+    [b]/rootfs[/b] Location of your root file system "/".[br]
+    [b]/etc/telegraf/telegraf.conf[/b] Location of your telegraf.conf file. I've included one in my github repo https://github.com/atribe/unRAID-docker. [br]
   </Description>
   <Overview>
 	   Telegraf sends metrics to InfluxDB. Telegraf can collect metrics about the host (in this case unRAID) and about other docker containers.
@@ -17,7 +21,7 @@
   <BindTime>true</BindTime>
   <Privileged>true</Privileged>
   <Networking>
-    <Mode>bridge</Mode>
+    <Mode>host</Mode>
   </Networking>
   <Environment>
     <Variable>
