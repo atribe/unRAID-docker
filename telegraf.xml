@@ -9,7 +9,7 @@
     [b]/var/run/docker.sock[/b] Location of your docker socket.[br]
   </Description>
   <Overview>
-	   Apt-Cacher NG is a caching proxy, specialized for package files from Linux distributors, primarily for Debian (and Debian based) distributions but not limited to those.
+	   Telegraf sends metrics to InfluxDB. Telegraf can collect metrics about the host (in this case unRAID) and about other docker containers.
   </Overview>
   <Support>https://hub.docker.com/_/telegraf/</Support>
   <Registry>https://hub.docker.com/_/telegraf/</Registry>
@@ -20,25 +20,56 @@
     <Mode>bridge</Mode>
   </Networking>
   <Environment>
+    <Variable>
+      <Name>HOST_PROC</Name>
+      <Value>/rootfs/proc</Value>
+    </Variable>
+    <Variable>
+      <Name>HOST_SYS</Name>
+      <Value>/rootfs/sys</Value>
+    </Variable>
+    <Variable>
+      <Name>HOST_ETC</Name>
+      <Value>/rootfs/etc</Value>
+    </Variable>
+    <Variable>
+      <Name>HOST_MOUNT_PREFIX</Name>
+      <Value>/rootfs</Value>
+    </Variable>
   </Environment>
   <Data>
     <Volume>
-      <HostDir>/mnt/user/appdata/telegraf</HostDir>
-      <ContainerDir>/etc/telegraf</ContainerDir>
+      <HostDir>/mnt/user/appdata/telegraf/telegraf.conf</HostDir>
+      <ContainerDir>/etc/telegraf/telegraf.conf</ContainerDir>
       <Mode>ro</Mode>
     </Volume>
     <Volume>
       <HostDir>/proc</HostDir>
-      <ContainerDir>/mnt/proc</ContainerDir>
+      <ContainerDir>/rootfs/proc</ContainerDir>
       <Mode>ro</Mode>
     </Volume>
     <Volume>
-      <HostDir>/mnt</HostDir>
-      <ContainerDir>/host</ContainerDir>
+      <HostDir>/etc</HostDir>
+      <ContainerDir>/rootfs/etc</ContainerDir>
+      <Mode>ro</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/sys</HostDir>
+      <ContainerDir>/rootfs/sys</ContainerDir>
+      <Mode>ro</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/</HostDir>
+      <ContainerDir>/rootfs</ContainerDir>
+      <Mode>ro</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/var/run/docker.sock</HostDir>
+      <ContainerDir>/var/run/docker.sock</ContainerDir>
       <Mode>ro</Mode>
     </Volume>
   </Data>
   <Banner></Banner>
-  <Icon></Icon>
+  <Icon>telegraf.png</Icon>
   <ExtraParams></ExtraParams>
 </Containers>
