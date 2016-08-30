@@ -44,6 +44,6 @@
   </Environment>
   <WebUI>http://[IP]:[PORT:61208]/</WebUI>
   <Banner></Banner>
-  <Icon></Icon>
+  <Icon>https://raw.githubusercontent.com/nicolargo/glances/master/glances/outputs/static/favicon.ico</Icon>
   <ExtraParams>--pid=host</ExtraParams>
 </Containers>
