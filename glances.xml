@@ -17,7 +17,7 @@
   <Repository>nicolargo/glances</Repository>
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>
-  <Pid>host</Pid>
+
   <Networking>
     <Mode>host</Mode>
   </Networking>
@@ -37,5 +37,5 @@
   <WebUI>http://[IP]:[PORT:61208]/</WebUI>
   <Banner></Banner>
   <Icon></Icon>
-  <ExtraParams></ExtraParams>
+  <ExtraParams>--pid=host</ExtraParams>
 </Containers>
