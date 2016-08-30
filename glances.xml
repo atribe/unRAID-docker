@@ -17,7 +17,6 @@
   <Repository>nicolargo/glances</Repository>
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>
-
   <Networking>
     <Mode>host</Mode>
   </Networking>
@@ -27,13 +26,6 @@
       <Value>-w</Value>
     </Variable>
   </Environment>
-  <Data>
-    <Volume>
-      <HostDir>/mnt/user/appdata/apt-cacher-ng</HostDir>
-      <ContainerDir>/var/cache/apt-cacher-ng</ContainerDir>
-      <Mode>rw</Mode>
-    </Volume>
-  </Data>
   <WebUI>http://[IP]:[PORT:61208]/</WebUI>
   <Banner></Banner>
   <Icon></Icon>
