@@ -6,6 +6,10 @@
   <Name>glances</Name>
   <Description>
 	  Glances is a cross-platform curses-based system monitoring tool written in Python.
+
+    [b][u][span style='color: #E80000;']Configuration[/span][/u][/b][br]
+    [b]/mnt[/b] Allows glances display hard disk usage stats.[br]
+    [b]/var/run/docker.sock[/b] Allows glances to display docker stats.[br]
   </Description>
   <Overview>
 	  Glances is a cross-platform curses-based system monitoring tool written in Python.
@@ -22,23 +26,8 @@
   </Networking>
   <Data>
     <Volume>
-      <HostDir>/proc</HostDir>
-      <ContainerDir>/rootfs/proc</ContainerDir>
-      <Mode>ro</Mode>
-    </Volume>
-    <Volume>
-      <HostDir>/etc</HostDir>
-      <ContainerDir>/rootfs/etc</ContainerDir>
-      <Mode>ro</Mode>
-    </Volume>
-    <Volume>
-      <HostDir>/sys</HostDir>
-      <ContainerDir>/rootfs/sys</ContainerDir>
-      <Mode>ro</Mode>
-    </Volume>
-    <Volume>
-      <HostDir>/</HostDir>
-      <ContainerDir>/rootfs</ContainerDir>
+      <HostDir>/mnt</HostDir>
+      <ContainerDir>/mnt</ContainerDir>
       <Mode>ro</Mode>
     </Volume>
     <Volume>
