@@ -22,6 +22,26 @@
   </Networking>
   <Data>
     <Volume>
+      <HostDir>/proc</HostDir>
+      <ContainerDir>/rootfs/proc</ContainerDir>
+      <Mode>ro</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/etc</HostDir>
+      <ContainerDir>/rootfs/etc</ContainerDir>
+      <Mode>ro</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/sys</HostDir>
+      <ContainerDir>/rootfs/sys</ContainerDir>
+      <Mode>ro</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/</HostDir>
+      <ContainerDir>/rootfs</ContainerDir>
+      <Mode>ro</Mode>
+    </Volume>
+    <Volume>
      <HostDir>/var/run/docker.sock</HostDir>
      <ContainerDir>/var/run/docker.sock</ContainerDir>
      <Mode>ro</Mode>
