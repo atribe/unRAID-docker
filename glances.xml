@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Containers>
+  <Beta>True</Beta>
+  <Category>Network:Proxy Network:Other Tools:</Category>
+  <Date>2016-08-29</Date>
+  <Name>glances</Name>
+  <Description>
+	  Glances is a cross-platform curses-based system monitoring tool written in Python.
+  </Description>
+  <Overview>
+	  Glances is a cross-platform curses-based system monitoring tool written in Python.
+  </Overview>
+  <Project>https://github.com/nicolargo/glances</Project>
+  <Support>https://github.com/atribe/unRAID-docker</Support>
+  <Registry>https://hub.docker.com/r/nicolargo/glances/</Registry>
+  <GitHub>https://github.com/nicolargo/glances</GitHub>
+  <Repository>nicolargo/glances</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Pid>host</Pid>
+  <Networking>
+    <Mode>host</Mode>
+  </Networking>
+  <Environment>
+    <Variable>
+      <Name>GLANCES_OPT</Name>
+      <Value>-w</Value>
+    </Variable>
+  </Environment>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/apt-cacher-ng</HostDir>
+      <ContainerDir>/var/cache/apt-cacher-ng</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <WebUI>http://[IP]:[PORT:61208]/</WebUI>
+  <Banner></Banner>
+  <Icon></Icon>
+  <ExtraParams></ExtraParams>
+</Containers>
