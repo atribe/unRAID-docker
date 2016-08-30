@@ -17,16 +17,16 @@
   <Repository>nicolargo/glances</Repository>
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>
+  <Networking>
+    <Mode>host</Mode>
+  </Networking>
   <Data>
     <Volume>
      <HostDir>/var/run/docker.sock</HostDir>
      <ContainerDir>/var/run/docker.sock</ContainerDir>
      <Mode>ro</Mode>
    </Volume>
- </Data>
-  <Networking>
-    <Mode>host</Mode>
-  </Networking>
+  </Data>
   <Environment>
     <Variable>
       <Name>GLANCES_OPT</Name>
