@@ -12,7 +12,8 @@
     [b]/var/run/docker.sock[/b] Allows glances to display docker stats.[br]
 
     Environment Variables
-    [b]GLANCES_OPT[/b] -w is for web server mode, which allows you to view the stats of your unRAID server in a browser. -s to set this instance as the server instance or -c <ip address> (example: -c 192.168.1.10) to make this be a client which points to the server at the ip address.
+    [b]GLANCES_OPT[/b] -w is for web server mode, which allows you to view the stats of your unRAID server in a browser.
+     -s to set this instance as the server instance or -c followed by the ip address (example: -c 192.168.1.10) to make this be a client which points to the server at the ip address.
   </Description>
   <Overview>
 	  Glances is a cross-platform curses-based system monitoring tool written in Python.
