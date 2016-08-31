@@ -5,15 +5,16 @@
   <Date>2016-08-30</Date>
   <Name>glances</Name>
   <Description>
-	  Glances is a cross-platform curses-based system monitoring tool written in Python.
-
+	  Glances is a cross-platform curses-based system monitoring tool written in Python.[br]
+    [br]
     [b][u][span style='color: #E80000;']Configuration[/span][/u][/b][br]
+    Volume Mounts[br]
     [b]/mnt[/b] Allows glances display hard disk usage stats.[br]
     [b]/var/run/docker.sock[/b] Allows glances to display docker stats.[br]
-
-    Environment Variables
-    [b]GLANCES_OPT[/b] -w is for web server mode, which allows you to view the stats of your unRAID server in a browser.
-     -s to set this instance as the server instance or -c followed by the ip address (example: -c 192.168.1.10) to make this be a client which points to the server at the ip address.
+    [br]
+    Environment Variables[br]
+    [b]GLANCES_OPT[/b] -w is for web server mode, which allows you to view the stats of your unRAID server in a browser.[br]
+     -s to set this instance as the server instance or -c followed by the ip address (example: -c 192.168.1.10) to make this be a client which points to the server at the ip address.[br]
   </Description>
   <Overview>
 	  Glances is a cross-platform curses-based system monitoring tool written in Python.
