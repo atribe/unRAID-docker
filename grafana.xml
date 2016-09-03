@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Containers>
-  <Beta>True</Beta>
+  <Beta>False</Beta>
   <Category>Network:Management Tools:</Category>
   <Date>2016-09-02</Date>
   <Name>Grafana</Name>
