@@ -49,8 +49,8 @@
       <Mode>rw</Mode>
     </Volume>
   </Data>
-  <ExtraParams></ExtraParams>
   <WebUI>http://[IP]:[PORT:8083]/</WebUI>
   <Banner></Banner>
   <Icon>https://raw.githubusercontent.com/pootzko/InfluxData.Net/master/nuget-icon.png</Icon>
+  <ExtraParams></ExtraParams>
 </Containers>

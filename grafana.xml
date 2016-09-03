@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Containers>
+  <Beta>True</Beta>
+  <Category>Network:Management Tools:</Category>
+  <Date>2016-09-02</Date>
+  <Name>Grafana</Name>
+  <Description>
+    Grafana is an open source, feature rich metrics dashboard and graph editor for Graphite, Elasticsearch, OpenTSDB, Prometheus and InfluxDB.[br]
+    [br]
+    [b][u][span style='color: #E80000;']Configuration[/span][/u][/b][br]
+    [b]Container Volumes:[/b][br]
+    [b]/var/lib/grafana[/b] Persistent data storage location[br]
+    [br]
+    [b]Container Ports:[/b][br]
+    [b]3000[/b] Web admin interface[br]
+    [br]
+    [b]Environment Variables:[/b][br]
+    [b]GF_SERVER_ROOT_URL[/b] The url to which you will be navigating to get to the grafana dashboard. Typically your ip or hostname[br]
+    [b]GF_SECURITY_ADMIN_PASSWORD[/b] Your password to use with the admin user. The default is user admin with password admin.[br]
+    [br]
+    [b][u][span style='color: #E80000;']CLICK ADVANCED VIEW AND SET THE ENVIRONMENT VARIABLES[/span][/u][/b][br]
+    [br]
+    After the docker container is running check out the datasource documentation at http://docs.grafana.org/datasources/overview/ and then the getting started guide at http://docs.grafana.org/guides/gettingstarted/[br]
+    A convient datasource would be Influxdb, which can also be found in the community apps.
+  </Description>
+  <Overview>
+    Grafana is an open source, feature rich metrics dashboard and graph editor for Graphite, Elasticsearch, OpenTSDB, Prometheus and InfluxDB.
+  </Overview>
+  <Project>http://grafana.org/</Project>
+  <Support>https://lime-technology.com/forum/index.php?topic=51498.0</Support>
+  <Registry>https://hub.docker.com/r/grafana/grafana/</Registry>
+  <GitHub>https://github.com/grafana/grafana</GitHub>
+  <Repository>grafana/grafana</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>3000</HostPort>
+        <ContainerPort>3000</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Environment>
+    <Variable>
+      <Name>GF_SERVER_ROOT_URL</Name>
+      <Value>http://your.server.ip.or.hostname</Value>
+    </Variable>
+    <Variable>
+      <Name>GF_SECURITY_ADMIN_PASSWORD</Name>
+      <Value>admin</Value>
+    </Variable>
+  </Environment>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/grafana</HostDir>
+      <ContainerDir>/var/lib/grafana</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <WebUI>http://[IP]:[PORT:3000]/</WebUI>
+  <Banner></Banner>
+  <Icon>https://demo.lightbend.com/grafana/public/img/grafana_icon.svg</Icon>
+  <ExtraParams></ExtraParams>
+</Containers>
