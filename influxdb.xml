@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Containers>
+  <Beta>False</Beta>
+  <Category>Network:Management Tools:</Category>
+  <Date>2016-09-02</Date>
+  <Name>Influxdb</Name>
+  <Description>
+    InfluxDB is an open source time series database with no external dependencies. It's useful for recording metrics, events, and performing analytics.[br]
+    [br]
+    [b][u][span style='color: #E80000;']Configuration[/span][/u][/b][br]
+    [b]Container Volumes:[/b][br]
+    [b]/var/lib/influxdb[/b] Persistent data storage location[br]
+    [br]
+    [b]Container Ports:[/b][br]
+    [b]8083[/b] Web admin interface[br]
+    [b]8086[/b] HTTP API port[br]
+  </Description>
+  <Overview>
+    InfluxDB is an open source time series database with no external dependencies. It's useful for recording metrics, events, and performing analytics.
+  </Overview>
+  <Project>https://influxdata.com/</Project>
+  <Support>https://lime-technology.com/forum/index.php?topic=51498.0</Support>
+  <Registry>https://hub.docker.com/_/influxdb/</Registry>
+  <GitHub>https://github.com/influxdata/influxdb</GitHub>
+  <Repository>influxdb:alpine</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8083</HostPort>
+        <ContainerPort>8083</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>8086</HostPort>
+        <ContainerPort>8086</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Environment>
+  </Environment>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/influxdb</HostDir>
+      <ContainerDir>/var/lib/influxdb</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <ExtraParams></ExtraParams>
+  <WebUI>http://[IP]:[PORT:8083]/</WebUI>
+  <Banner></Banner>
+  <Icon>https://raw.githubusercontent.com/pootzko/InfluxData.Net/master/nuget-icon.png</Icon>
+</Containers>
