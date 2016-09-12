@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Container>
+  <Name>telegraf</Name>
+  <Beta>False</Beta>
+  <Category>Tools:</Category>
+  <Date>2016-09-11</Date>
+  <Description>
+    Telegraf gathers metrics from your system and sends them to an InfluxDB server for storage. From InfluxDB you would typically use something like Grafana to plot the data.[br]
+    Both Grafana and Influxdb are available through Community Apps[br]
+    [br]
+    [b][span style='color: #E80000;']This version of telegraf requires you to manually place a config file at /mnt/user/appdata/telegraf/telegraf.conf[/span][/b] The container will not start without it.[br]
+    [br]
+    The default telegraf.conf file can be downloaded at [u]https://github.com/influxdata/telegraf/blob/master/etc/telegraf.conf[/u]. If you would prefer not to use a config file you can search for untelegraf in community apps for a version that only uses environment variables.[br]
+    [br]
+    [b][u][span style='color: #E80000;']Configuration[/span][/u][/b][br]
+    [b]Container Volumes:[/b][br]
+    [b]/var/run/docker.sock[/b] Read Only. Location of your docker socket.[br]
+    [b]/var/run/utmp[/b] Read Only. Location of your utmp file.[br]
+    [b]/rootfs[/b] Read Only. To be mapped to the root of the host file system. This is so the disk usage reported will be that of the host system.[br]
+    [b]/rootfs/etc[/b] Read Only. To be mapped to the etc of the host file system. This is so the disk usage reported will be that of the host system.[br]
+    [b]/rootfs/proc[/b] Read Only. To be mapped to the proc of the host file system. This is so the disk usage reported will be that of the host system.[br]
+    [b]/rootfs/sys[/b] Read Only. To be mapped to the sys of the host file system. This is so the disk usage reported will be that of the host system.[br]
+    [br]
+    [b]Environment Variables:[/b][br]
+    [b]HOST_MOUNT_PREFIX[/b] Name of container volume mapping of the root file system.[br]
+    [b]HOST_ETC[/b] Name of the etc volume mapping of the root file system.[br]
+    [b]HOST_PROC[/b] Name of the proc volume mapping of the root file system.[br]
+    [b]HOST_SYS[/b] Name of the sys volume mapping of the root file sytem.[br]
+  </Description>
+  <Overview>
+	   Telegraf sends metrics to InfluxDB. Telegraf can collect metrics about the host (in this case unRAID) and about other docker containers.
+  </Overview>
+  <Project>https://influxdata.com/time-series-platform/telegraf/</Project>
+  <Support>https://lime-technology.com/forum/index.php?topic=51498.0</Support>
+  <Registry>https://hub.docker.com/_/telegraf/</Registry>
+  <GitHub>https://github.com/influxdata/telegraf</GitHub>
+  <Repository>telegraf:1.0-alpine</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>true</Privileged>
+  <Environment>
+    <Variable>
+      <Name>HOST_PROC</Name>
+      <Value>/rootfs/proc</Value>
+    </Variable>
+    <Variable>
+      <Name>HOST_SYS</Name>
+      <Value>/rootfs/sys</Value>
+    </Variable>
+    <Variable>
+      <Name>HOST_ETC</Name>
+      <Value>/rootfs/etc</Value>
+    </Variable>
+    <Variable>
+      <Name>HOST_MOUNT_PREFIX</Name>
+      <Value>/rootfs</Value>
+    </Variable>
+  </Environment>
+  <Networking>
+    <Mode>host</Mode>
+    <Publish/>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/var/run/utmp</HostDir>
+      <ContainerDir>/var/run/utmp</ContainerDir>
+      <Mode>ro</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/var/run/docker.sock</HostDir>
+      <ContainerDir>/var/run/docker.sock</ContainerDir>
+      <Mode>ro</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/</HostDir>
+      <ContainerDir>/rootfs</ContainerDir>
+      <Mode>ro</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/sys</HostDir>
+      <ContainerDir>/rootfs/sys</ContainerDir>
+      <Mode>ro</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/etc</HostDir>
+      <ContainerDir>/rootfs/etc</ContainerDir>
+      <Mode>ro</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/proc</HostDir>
+      <ContainerDir>/rootfs/proc</ContainerDir>
+      <Mode>ro</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/telegraf/telegraf.conf</HostDir>
+      <ContainerDir>/etc/telegraf/telegraf.conf</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Version>1.0.0</Version>
+  <WebUI></WebUI>
+  <Banner></Banner>
+  <Icon></Icon>
+  <ExtraParams></ExtraParams>
+</Container>
