@@ -103,6 +103,6 @@
   <Version></Version>
   <WebUI></WebUI>
   <Banner></Banner>
-  <Icon></Icon>
+  <Icon>https://github.com/atribe/unRAID-docker/raw/master/icons/telegraf.png</Icon>
   <ExtraParams></ExtraParams>
 </Container>
