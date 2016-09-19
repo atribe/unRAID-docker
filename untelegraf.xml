@@ -18,6 +18,7 @@
     [b]/rootfs/sys[/b] Read Only. To be mapped to the sys of the host file system. This is so the disk usage reported will be that of the host system.[br]
     [br]
     [b]Environment Variables:[/b][br]
+    [b]INFLUXDB_RETENTION_POLICY[/b] Name of the retention policy. This should be present, but with no value assigned, as that is the default for InfluxDB 1.0.0
     [b]HOST_MOUNT_PREFIX[/b] Name of container volume mapping of the root file system.[br]
     [b]HOST_ETC[/b] Name of the etc volume mapping of the root file system.[br]
     [b]HOST_PROC[/b] Name of the proc volume mapping of the root file system.[br]
@@ -38,6 +39,10 @@
   <BindTime>true</BindTime>
   <Privileged>true</Privileged>
   <Environment>
+    <Variable>
+      <Name>INFLUXDB_RETENTION_POLICY</Name>
+      <Value></Value>
+    </Variable>
     <Variable>
       <Name>HOST_MOUNT_PREFIX</Name>
       <Value>/rootfs</Value>
