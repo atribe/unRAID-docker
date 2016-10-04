@@ -1,5 +1,6 @@
 <?xml version="1.0"?>
 <Container version="2">
+  <Date>2016-10-04</Date>
   <Name>mineos-node</Name>
   <Beta>False</Beta>
   <Repository>hexparrot/mineos:node-jessie</Repository>
