@@ -49,7 +49,7 @@ Navigate to the WebUI Address and append install.php. Example http://192.168.1.1
   <Data>
     <Volume>
       <HostDir>/mnt/user/appdata/dokuwiki</HostDir>
-      <ContainerDir>/var/www/dokuwiki</ContainerDir>
+      <ContainerDir>/var/www</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
   </Data>
