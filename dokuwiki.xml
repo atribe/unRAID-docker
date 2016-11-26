@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>DokuWiki</Name>
-  <Repository>istepanov/dokuwiki/</Repository>
+  <Repository>istepanov/dokuwiki</Repository>
   <Registry>https://hub.docker.com/r/istepanov/dokuwiki/</Registry>
   <Network>bridge</Network>
   <Privileged>false</Privileged>
