@@ -6,13 +6,17 @@
   <Network>bridge</Network>
   <Privileged>false</Privileged>
   <Support>https://lime-technology.com/forum/index.php?topic=51498</Support>
-  <Overview>DokuWiki is a simple to use and highly versatile Open Source wiki software that doesn't require a database.[br][br][br][br]&#xD;
-&#xD;
-[b][span style='color: #E80000;']One Time Installation Instructions[/b][br]&#xD;
-Navigate to the WebUI Address and append install.php. Example http://192.168.1.10:8888/install.php.&#xD;
-&#xD;
-[b]Container Volumes:[/b][br]&#xD;
-[b]/var/www/dokuwiki[/b] Persistent data storage location[br]</Overview>
+  <Overview>DokuWiki is a simple to use and highly versatile Open Source wiki software that doesn't require a database.[br]
+    [br]
+[b][span style='color: #E80000;']One Time Installation Instructions[/b][br]
+Navigate to the WebUI Address and append install.php. Example http://192.168.1.10:8888/install.php.&#xD.[br]
+[br]
+[b]Container Ports:[/b][br]
+[b]Container Port 80[/b] Host Port 8888[br]
+[br]
+[b]Container Volumes:[/b][br]
+[b]/var/www/dokuwiki[/b] Persistent data storage location[br]
+</Overview>
   <Category>Productivity: Network:Other Status:Stable</Category>
   <WebUI>http://[IP]:[PORT:8888]/</WebUI>
   <TemplateURL/>
