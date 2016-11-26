@@ -18,12 +18,12 @@ Navigate to the WebUI Address and append install.php. Example http://192.168.1.1
 [b]Container Volumes:[/b][br]
 [b]/var/www/dokuwiki[/b] Persistent data storage location[br]
 </Overview>
-  <Category>Productivity: Network:Other Status:Stable</Category>
+  <Category>Productivity: Network:Other Status:Beta</Category>
   <WebUI>http://[IP]:[PORT:8888]/</WebUI>
   <TemplateURL>https://github.com/atribe/unRAID-docker/blob/master/dokuwiki.xml</TemplateURL>
   <Icon>http://i.imgur.com/RMUp6a7.png</Icon>
   <ExtraParams/>
-  <DateInstalled>1480142556</DateInstalled>
+  <DateInstalled>1480142821</DateInstalled>
   <Description>
 DokuWiki is a simple to use and highly versatile Open Source wiki software that doesn't require a database.[br]
 [br]
