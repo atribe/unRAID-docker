@@ -20,7 +20,7 @@ Navigate to the WebUI Address and append install.php. Example http://192.168.1.1
 </Overview>
   <Category>Productivity: Network:Other Status:Stable</Category>
   <WebUI>http://[IP]:[PORT:8888]/</WebUI>
-  <TemplateURL>https://github.com/atribe/unRAID-docker/blob/master/dokuwiki.xml<TemplateURL/>
+  <TemplateURL>https://github.com/atribe/unRAID-docker/blob/master/dokuwiki.xml</TemplateURL>
   <Icon>http://i.imgur.com/RMUp6a7.png</Icon>
   <ExtraParams/>
   <DateInstalled>1480138279</DateInstalled>
