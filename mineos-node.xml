@@ -1,8 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?>
-<Container>
-  <Date>2016-10-04</Date>
+<?xml version="1.0"?>
+<Container version="2">
   <Name>mineos-node</Name>
-  <Beta>False</Beta>
   <Repository>hexparrot/mineos:node-jessie</Repository>
   <Registry>https://hub.docker.com/r/hexparrot/mineos/</Registry>
   <Network>bridge</Network>
@@ -12,7 +10,7 @@
 [br]
 This allows the front-end to provide system health, disk and memory usage, and logging in real-time.[br]
 [br]
-Web Admin Settings[br]
+[br]
 DEFAULT USER: mc[br]
 DEFAULT PASSWORD: mypass[br]
 [br]
@@ -23,19 +21,31 @@ DEFAULT PASSWORD: mypass[br]
 [b]Container Ports:[/b][br]
 [b]8443[/b] Web admin interface[br]
 [b]25565-25575[/b] Minecraft server ports, by default you can have 10 servers. If you need more you will have to add more port bindings.[br]
-[br]
 [b]Environment Variables:[/b][br]
 [b]USER_PASSWORD[/b] Password for the web admin interface</Overview>
   <Category>MediaServer:Other</Category>
   <WebUI>https://[IP]:[PORT:8443]</WebUI>
-  <TemplateURL/>
+  <TemplateURL>https://github.com/atribe/unRAID-docker/blob/master/mineos-node.xml</TemplateURL>
   <Icon>http://i.imgur.com/P6RRtHH.png</Icon>
   <ExtraParams/>
-  <DateInstalled>1474760420</DateInstalled>
+  <DateInstalled>1480139680</DateInstalled>
   <Description>MineOS is a server front-end to ease managing Minecraft administrative tasks. This iteration using Node.js aims to enhance previous MineOS scripts (Python-based), by leveraging the event-triggering, asyncronous model of Node.JS and websockets.[br]
 [br]
 This allows the front-end to provide system health, disk and memory usage, and logging in real-time.[br]
-  </Description>
+[br]
+[br]
+DEFAULT USER: mc[br]
+DEFAULT PASSWORD: mypass[br]
+[br]
+[b][u][span style='color: #E80000;']Configuration[/span][/u][/b][br]
+[b]Container Volumes:[/b][br]
+[b]/var/games/minecraft[/b] Persistent data storage location[br]
+[br]
+[b]Container Ports:[/b][br]
+[b]8443[/b] Web admin interface[br]
+[b]25565-25575[/b] Minecraft server ports, by default you can have 10 servers. If you need more you will have to add more port bindings.[br]
+[b]Environment Variables:[/b][br]
+[b]USER_PASSWORD[/b] Password for the web admin interface</Description>
   <Networking>
     <Mode>bridge</Mode>
     <Publish>
