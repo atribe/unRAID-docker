@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>DokuWiki</Name>
+  <Repository>istepanov/dokuwiki/</Repository>
+  <Registry>https://hub.docker.com/r/istepanov/dokuwiki/</Registry>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Support>https://lime-technology.com/forum/index.php?topic=51498</Support>
+  <Overview>DokuWiki is a simple to use and highly versatile Open Source wiki software that doesn't require a database.[br][br][br][br]&#xD;
+&#xD;
+[b][span style='color: #E80000;']One Time Installation Instructions[/b][br]&#xD;
+Navigate to the WebUI Address and append install.php. Example http://192.168.1.10:8888/install.php.&#xD;
+&#xD;
+[b]Container Volumes:[/b][br]&#xD;
+[b]/var/www/dokuwiki[/b] Persistent data storage location[br]</Overview>
+  <Category>Productivity: Network:Other Status:Stable</Category>
+  <WebUI>http://[IP]:[PORT:8888]/</WebUI>
+  <TemplateURL/>
+  <Icon>http://i.imgur.com/RMUp6a7.png</Icon>
+  <ExtraParams/>
+  <DateInstalled>1480138279</DateInstalled>
+  <Description>DokuWiki is a simple to use and highly versatile Open Source wiki software that doesn't require a database.[br][br][br][br]&#xD;
+&#xD;
+[b][span style='color: #E80000;']One Time Installation Instructions[/b][br]&#xD;
+Navigate to the WebUI Address and append install.php. Example http://192.168.1.10:8888/install.php.&#xD;
+&#xD;
+[b]Container Volumes:[/b][br]&#xD;
+[b]/var/www/dokuwiki[/b] Persistent data storage location[br]</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8888</HostPort>
+        <ContainerPort>80</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/docuwiki</HostDir>
+      <ContainerDir>/var/www/dokuwiki</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment/>
+  <Config Name="Host Web Port" Target="80" Default="80" Mode="tcp" Description="Container Port: 80" Type="Port" Display="always" Required="true" Mask="false">8888</Config>
+  <Config Name="Host Persistent Storage Path" Target="/var/www/dokuwiki" Default="" Mode="rw" Description="Container Path: /var/www/dokuwiki" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/docuwiki</Config>
+</Container>
