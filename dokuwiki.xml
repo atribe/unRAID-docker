@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>DokuWiki</Name>
-  <Repository>istepanov/dokuwiki</Repository>
-  <Registry>https://hub.docker.com/r/istepanov/dokuwiki/</Registry>
+  <Repository>mprasil/dokuwiki</Repository>
+  <Registry>https://hub.docker.com/r/mprasil/dokuwiki/</Registry>
   <Network>bridge</Network>
   <Privileged>false</Privileged>
   <Support>https://lime-technology.com/forum/index.php?topic=51498</Support>
@@ -20,7 +20,7 @@ Navigate to the WebUI Address and append install.php. Example http://192.168.1.1
 </Overview>
   <Category>Productivity: Network:Other Status:Stable</Category>
   <WebUI>http://[IP]:[PORT:8888]/</WebUI>
-  <TemplateURL/>
+  <TemplateURL>https://github.com/atribe/unRAID-docker/blob/master/dokuwiki.xml<TemplateURL/>
   <Icon>http://i.imgur.com/RMUp6a7.png</Icon>
   <ExtraParams/>
   <DateInstalled>1480138279</DateInstalled>
@@ -49,7 +49,7 @@ Navigate to the WebUI Address and append install.php. Example http://192.168.1.1
   <Data>
     <Volume>
       <HostDir>/mnt/user/appdata/dokuwiki</HostDir>
-      <ContainerDir>/var/www</ContainerDir>
+      <ContainerDir>/var/www/dokuwiki</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
   </Data>
