@@ -55,5 +55,5 @@ Navigate to the WebUI Address and append install.php. Example http://192.168.1.1
   </Data>
   <Environment/>
   <Config Name="Host Web Port" Target="80" Default="80" Mode="tcp" Description="Container Port: 80" Type="Port" Display="always" Required="true" Mask="false">8888</Config>
-  <Config Name="Host Persistent Storage Path" Target="/var/www/dokuwiki" Default="" Mode="rw" Description="Container Path: /var/www/dokuwiki" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/docuwiki</Config>
+  <Config Name="Host Persistent Storage Path" Target="/var/www/dokuwiki" Default="" Mode="rw" Description="Container Path: /var/www/dokuwiki" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/dokuwiki</Config>
 </Container>
