@@ -23,7 +23,7 @@ Navigate to the WebUI Address and append install.php. Example http://192.168.1.1
   <TemplateURL>https://github.com/atribe/unRAID-docker/blob/master/dokuwiki.xml</TemplateURL>
   <Icon>http://i.imgur.com/RMUp6a7.png</Icon>
   <ExtraParams/>
-  <DateInstalled>1480138279</DateInstalled>
+  <DateInstalled>1480142556</DateInstalled>
   <Description>
 DokuWiki is a simple to use and highly versatile Open Source wiki software that doesn't require a database.[br]
 [br]
@@ -35,7 +35,7 @@ Navigate to the WebUI Address and append install.php. Example http://192.168.1.1
 [br]
 [b]Container Volumes:[/b][br]
 [b]/var/www/dokuwiki[/b] Persistent data storage location[br]
-  </Description>
+</Description>
   <Networking>
     <Mode>bridge</Mode>
     <Publish>
@@ -48,12 +48,30 @@ Navigate to the WebUI Address and append install.php. Example http://192.168.1.1
   </Networking>
   <Data>
     <Volume>
-      <HostDir>/mnt/user/appdata/dokuwiki</HostDir>
-      <ContainerDir>/var/www/dokuwiki</ContainerDir>
+      <HostDir>/mnt/user/appdata/dokuwiki/data</HostDir>
+      <ContainerDir>/dokuwiki/data</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/dokuwiki/lib/plugins</HostDir>
+      <ContainerDir>/dokuwiki/lib/plugins</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/dokuwiki/lib/tpl/</HostDir>
+      <ContainerDir>/dokuwiki/lib/tpl</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/dokuwiki/conf/</HostDir>
+      <ContainerDir>/dokuwiki/conf</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
   </Data>
   <Environment/>
   <Config Name="Host Web Port" Target="80" Default="80" Mode="tcp" Description="Container Port: 80" Type="Port" Display="always" Required="true" Mask="false">8888</Config>
-  <Config Name="Host Persistent Storage Path" Target="/var/www/dokuwiki" Default="" Mode="rw" Description="Container Path: /var/www/dokuwiki" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/dokuwiki</Config>
+  <Config Name="Container Data Persistent Storage Path" Target="/dokuwiki/data" Default="" Mode="rw" Description="Container Path: /dokuwiki/data" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/dokuwiki/data</Config>
+  <Config Name="Plugins Path" Target="/dokuwiki/lib/plugins" Default="" Mode="rw" Description="Container Path: /dokuwiki/lib/plugins" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/dokuwiki/lib/plugins</Config>
+  <Config Name="Template Path" Target="/dokuwiki/lib/tpl" Default="" Mode="rw" Description="Container Path: /dokuwiki/lib/tpl" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/dokuwiki/lib/tpl/</Config>
+  <Config Name="Conf Path" Target="/dokuwiki/conf" Default="" Mode="rw" Description="Container Path: /dokuwiki/conf" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/dokuwiki/conf/</Config>
 </Container>
