@@ -22,7 +22,7 @@
   <Support>https://lime-technology.com/forum/index.php?topic=51498.0</Support>
   <Registry>https://hub.docker.com/_/influxdb/</Registry>
   <GitHub>https://github.com/influxdata/influxdb</GitHub>
-  <Repository>influxdb:alpine</Repository>
+  <Repository>influxdb:latest</Repository>
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>
   <Networking>
