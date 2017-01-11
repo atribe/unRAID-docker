@@ -1,50 +1,50 @@
 <?xml version="1.0"?>
-<Container version="2">
+<Container version="3">
   <Name>mineos-node</Name>
   <Repository>hexparrot/mineos:node-jessie</Repository>
   <Registry>https://hub.docker.com/r/hexparrot/mineos/</Registry>
   <Network>bridge</Network>
   <Privileged>false</Privileged>
   <Support>http://lime-technology.com/forum/index.php?topic=51498.0</Support>
-  <Overview>MineOS is a server front-end to ease managing Minecraft administrative tasks. This iteration using Node.js aims to enhance previous MineOS scripts (Python-based), by leveraging the event-triggering, asyncronous model of Node.JS and websockets.[br]
-[br]
-This allows the front-end to provide system health, disk and memory usage, and logging in real-time.[br]
-[br]
-[br]
-DEFAULT USER: mc[br]
-DEFAULT PASSWORD: mypass[br]
-[br]
-[b][u][span style='color: #E80000;']Configuration[/span][/u][/b][br]
-[b]Container Volumes:[/b][br]
-[b]/var/games/minecraft[/b] Persistent data storage location[br]
-[br]
-[b]Container Ports:[/b][br]
-[b]8443[/b] Web admin interface[br]
-[b]25565-25575[/b] Minecraft server ports, by default you can have 10 servers. If you need more you will have to add more port bindings.[br]
-[b]Environment Variables:[/b][br]
+  <Overview>MineOS is a server front-end to ease managing Minecraft administrative tasks. This iteration using Node.js aims to enhance previous MineOS scripts (Python-based), by leveraging the event-triggering, asyncronous model of Node.JS and websockets.[br]&#xD;
+[br]&#xD;
+This allows the front-end to provide system health, disk and memory usage, and logging in real-time.[br]&#xD;
+[br]&#xD;
+[br]&#xD;
+DEFAULT USER: mc[br]&#xD;
+DEFAULT PASSWORD: mypass[br]&#xD;
+[br]&#xD;
+[b][u][span style='color: #E80000;']Configuration[/span][/u][/b][br]&#xD;
+[b]Container Volumes:[/b][br]&#xD;
+[b]/var/games/minecraft[/b] Persistent data storage location[br]&#xD;
+[br]&#xD;
+[b]Container Ports:[/b][br]&#xD;
+[b]8443[/b] Web admin interface[br]&#xD;
+[b]25565-25575[/b] Minecraft server ports, by default you can have 10 servers. If you need more you will have to add more port bindings.[br]&#xD;
+[b]Environment Variables:[/b][br]&#xD;
 [b]USER_PASSWORD[/b] Password for the web admin interface</Overview>
   <Category>MediaServer:Other</Category>
   <WebUI>https://[IP]:[PORT:8443]</WebUI>
   <TemplateURL>https://github.com/atribe/unRAID-docker/blob/master/mineos-node.xml</TemplateURL>
   <Icon>http://i.imgur.com/P6RRtHH.png</Icon>
   <ExtraParams/>
-  <DateInstalled>1480139680</DateInstalled>
-  <Description>MineOS is a server front-end to ease managing Minecraft administrative tasks. This iteration using Node.js aims to enhance previous MineOS scripts (Python-based), by leveraging the event-triggering, asyncronous model of Node.JS and websockets.[br]
-[br]
-This allows the front-end to provide system health, disk and memory usage, and logging in real-time.[br]
-[br]
-[br]
-DEFAULT USER: mc[br]
-DEFAULT PASSWORD: mypass[br]
-[br]
-[b][u][span style='color: #E80000;']Configuration[/span][/u][/b][br]
-[b]Container Volumes:[/b][br]
-[b]/var/games/minecraft[/b] Persistent data storage location[br]
-[br]
-[b]Container Ports:[/b][br]
-[b]8443[/b] Web admin interface[br]
-[b]25565-25575[/b] Minecraft server ports, by default you can have 10 servers. If you need more you will have to add more port bindings.[br]
-[b]Environment Variables:[/b][br]
+  <DateInstalled>1484098961</DateInstalled>
+  <Description>MineOS is a server front-end to ease managing Minecraft administrative tasks. This iteration using Node.js aims to enhance previous MineOS scripts (Python-based), by leveraging the event-triggering, asyncronous model of Node.JS and websockets.[br]&#xD;
+[br]&#xD;
+This allows the front-end to provide system health, disk and memory usage, and logging in real-time.[br]&#xD;
+[br]&#xD;
+[br]&#xD;
+DEFAULT USER: mc[br]&#xD;
+DEFAULT PASSWORD: mypass[br]&#xD;
+[br]&#xD;
+[b][u][span style='color: #E80000;']Configuration[/span][/u][/b][br]&#xD;
+[b]Container Volumes:[/b][br]&#xD;
+[b]/var/games/minecraft[/b] Persistent data storage location[br]&#xD;
+[br]&#xD;
+[b]Container Ports:[/b][br]&#xD;
+[b]8443[/b] Web admin interface[br]&#xD;
+[b]25565-25575[/b] Minecraft server ports, by default you can have 10 servers. If you need more you will have to add more port bindings.[br]&#xD;
+[b]Environment Variables:[/b][br]&#xD;
 [b]USER_PASSWORD[/b] Password for the web admin interface</Description>
   <Networking>
     <Mode>bridge</Mode>
