@@ -29,7 +29,7 @@
     [b][u][span style='color: #E80000;']More environtment variables are available and covered on the docker hub page: https://hub.docker.com/r/appcelerator/telegraf/.[/span][/u][/b]
   </Description>
   <Overview>
-    Telegraf sends metrics to InfluxDB. Telegraf can collect metrics about the host (in this case unRAID) and about other docker containers.
+    Telegraf sends metrics to InfluxDB. Telegraf can collect metrics about the host (in this case unRAID) and about other docker containers. The untelegraf docker doesn't use a config file, the telegraf docker container requires a manualy placed config file.
   </Overview>
   <Project>https://influxdata.com/time-series-platform/telegraf/</Project>
   <Support>https://lime-technology.com/forum/index.php?topic=51498.0</Support>
