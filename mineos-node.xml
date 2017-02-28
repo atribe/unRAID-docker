@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<Container version="3">
+<Container version="2">
   <Name>mineos-node</Name>
   <Repository>hexparrot/mineos:node-jessie</Repository>
   <Registry>https://hub.docker.com/r/hexparrot/mineos/</Registry>
@@ -28,7 +28,7 @@ DEFAULT PASSWORD: mypass[br]&#xD;
   <TemplateURL>https://github.com/atribe/unRAID-docker/blob/master/mineos-node.xml</TemplateURL>
   <Icon>http://i.imgur.com/P6RRtHH.png</Icon>
   <ExtraParams/>
-  <DateInstalled>1484098961</DateInstalled>
+  <DateInstalled>1488251991</DateInstalled>
   <Description>MineOS is a server front-end to ease managing Minecraft administrative tasks. This iteration using Node.js aims to enhance previous MineOS scripts (Python-based), by leveraging the event-triggering, asyncronous model of Node.JS and websockets.[br]&#xD;
 [br]&#xD;
 This allows the front-end to provide system health, disk and memory usage, and logging in real-time.[br]&#xD;
