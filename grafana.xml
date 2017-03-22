@@ -62,6 +62,6 @@
   </Data>
   <WebUI>http://[IP]:[PORT:3000]/</WebUI>
   <Banner></Banner>
-  <Icon>https://demo.lightbend.com/grafana/public/img/grafana_icon.svg</Icon>
+  <Icon>https://github.com/atribe/unRAID-docker/raw/master/icons/grafana.png</Icon>
   <ExtraParams></ExtraParams>
 </Containers>
