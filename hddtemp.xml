@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>HDDTemp</Name>
-  <Repository>docker pull drewster727/hddtemp-docker</Repository>
+  <Repository>drewster727/hddtemp-docker</Repository>
   <Registry>https://hub.docker.com/r/drewster727/hddtemp-docker/</Registry>
   <Network>host</Network>
   <MyIP/>
