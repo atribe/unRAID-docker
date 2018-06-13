@@ -12,7 +12,7 @@
   <Category>Tools:</Category>
   <WebUI/>
   <TemplateURL/>
-  <Icon/>
+  <Icon>https://github.com/atribe/unRAID-docker/raw/master/icons/hddtemp.png</Icon>
   <ExtraParams/>
   <PostArgs/>
   <DateInstalled>1527390270</DateInstalled>
