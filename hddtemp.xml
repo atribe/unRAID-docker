@@ -8,19 +8,19 @@
   <Privileged>true</Privileged>
   <Support>https://lime-technology.com/forums/topic/49775-support-for-atribes-repo-docker-images/</Support>
   <Project>https://hub.docker.com/r/drewster727/hddtemp-docker/</Project>
-  <Overview/>
+  <Overview>Ubuntu based image with hddtemp installed and configured to be accessible by other docker containers. In this case it is perfect for use with Telegraf and it's hdd temp plugin.</Overview>
   <Category>Tools:</Category>
   <WebUI/>
-  <TemplateURL/>
+  <TemplateURL>https://github.com/atribe/unRAID-docker/blob/master/hddtemp.xml</TemplateURL>
   <Icon>https://github.com/atribe/unRAID-docker/raw/master/icons/hddtemp.png</Icon>
   <ExtraParams/>
   <PostArgs/>
-  <DateInstalled>1527390270</DateInstalled>
+  <DateInstalled>1528858402</DateInstalled>
   <DonateText/>
   <DonateLink/>
   <DonateImg/>
   <MinVer/>
-  <Description/>
+  <Description>Ubuntu based image with hddtemp installed and configured to be accessible by other docker containers. In this case it is perfect for use with Telegraf and it's hdd temp plugin.</Description>
   <Networking>
     <Mode>host</Mode>
     <Publish/>
