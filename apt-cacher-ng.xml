@@ -40,6 +40,6 @@
   </Data>
   <WebUI>http://[IP]:[PORT:3142]/</WebUI>
   <Banner></Banner>
-  <Icon></Icon>
+  <Icon>https://github.com/atribe/unRAID-docker/raw/master/icons/apt-cacher.png</Icon>
   <ExtraParams></ExtraParams>
 </Containers>
