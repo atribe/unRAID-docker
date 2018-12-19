@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<Container version="2">
+    <Name>SpeedtestforInfluxDB</Name>
+    <Repository>atribe/speedtest-for-influxdb-and-grafana</Repository>
+    <Registry>https://cloud.docker.com/u/atribe/repository/docker/atribe/speedtest-for-influxdb-and-grafana</Registry>
+    <Network>bridge</Network>
+    <MyIP/>
+    <Shell>sh</Shell>
+    <Privileged>false</Privileged>
+    <Support>https://forums.unraid.net/topic/49775-support-for-atribes-repo-docker-images/</Support>
+    <Project>https://github.com/barrycarey/speedtest-for-influxdb-and-grafana</Project>
+    <Overview>A speedtest docker container that forwards the data to influxDB. Download the config.ini file from https://github.com/barrycarey/Speedtest-for-InfluxDB-and-Grafana/blob/master/config.ini before you start the container.</Overview>
+    <Category>Cloud: Network:Web</Category>
+    <WebUI/>
+    <TemplateURL>https://github.com/atribe/unRAID-docker</TemplateURL>
+    <Icon/>
+    <ExtraParams/>
+    <PostArgs/>
+    <CPUset/>
+    <DateInstalled>1545197988</DateInstalled>
+    <DonateText/>
+    <DonateLink/>
+    <Description>A speedtest docker container that forwards the data to influxDB. Download the config.ini file from https://github.com/barrycarey/Speedtest-for-InfluxDB-and-Grafana/blob/master/config.ini before you start the container.</Description>
+    <Networking>
+        <Mode>bridge</Mode>
+        <Publish/>
+    </Networking>
+    <Data>
+        <Volume>
+            <HostDir>/mnt/user/appdata/speedtest-influxdb/config.ini</HostDir>
+            <ContainerDir>/src/config.ini</ContainerDir>
+            <Mode>rw</Mode>
+        </Volume>
+    </Data>
+    <Environment/>
+    <Labels/>
+    <Config Name="Config File" Target="/src/config.ini" Default="/mnt/user/appdata/speedtest-influxdb/config.ini" Mode="rw" Description="Download the config.ini file from https://github.com/barrycarey/Speedtest-for-InfluxDB-and-Grafana/blob/master/config.ini and copy it to /mnt/user/appdata/speedtest-influxdb/config.ini&#13;&#10;COPY THE FILE BEFORE YOU START THE CONTAINER. IF YOU DON'T AN EMPTY DIRECTORY WILL BE CREATED INSTEAD." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/speedtest-influxdb/config.ini</Config>
+</Container>
