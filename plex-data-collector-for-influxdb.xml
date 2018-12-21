@@ -12,7 +12,7 @@
     <Overview>A speedtest docker container that forwards the data to influxDB. Download the config.ini file from https://github.com/unriad-stuff/Plex-Data-Collector-For-InfluxDB/blob/master/config.ini before you start the container.</Overview>
     <Category>Cloud: Network:Web</Category>
     <WebUI/>
-    <TemplateURL>https://github.com/unriad-stuff/docker-containers</TemplateURL>
+    <TemplateURL>https://github.com/unriad-stuff/unRAID-docker</TemplateURL>
     <Icon/>
     <ExtraParams/>
     <PostArgs/>
