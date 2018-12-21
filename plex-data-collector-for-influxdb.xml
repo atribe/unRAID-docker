@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<Container version="2">
+    <Name>Plex Data Collector for InfluxDB</Name>
+    <Repository>achumchal/plex_data_collector_for_influxdb</Repository>
+    <Registry>https://hub.docker.com/r/achumchal/plex_data_collector_for_influxdb</Registry>
+    <Network>bridge</Network>
+    <MyIP/>
+    <Shell>sh</Shell>
+    <Privileged>false</Privileged>
+    <Support>https://github.com/unriad-stuff/Plex-Data-Collector-For-InfluxDB/issues</Support>
+    <Project>https://github.com/barrycarey/Plex-Data-Collector-For-InfluxDB</Project>
+    <Overview>A speedtest docker container that forwards the data to influxDB. Download the config.ini file from https://github.com/unriad-stuff/Plex-Data-Collector-For-InfluxDB/blob/master/config.ini before you start the container.</Overview>
+    <Category>Cloud: Network:Web</Category>
+    <WebUI/>
+    <TemplateURL>https://github.com/unriad-stuff/docker-containers</TemplateURL>
+    <Icon/>
+    <ExtraParams/>
+    <PostArgs/>
+    <CPUset/>
+    <DateInstalled>1545197988</DateInstalled>
+    <DonateText/>
+    <DonateLink/>
+    <Description>Collects data about your Plex server and sends it to InfluxDB Download the config.ini file from https://github.com/unriad-stuff/Plex-Data-Collector-For-InfluxDB/blob/master/config.ini before you start the container.</Description>
+    <Networking>
+        <Mode>bridge</Mode>
+        <Publish/>
+    </Networking>
+    <Data>
+        <Volume>
+            <HostDir>/mnt/user/appdata/plex-collector-influxdb/config.ini</HostDir>
+            <ContainerDir>/src/config.ini</ContainerDir>
+            <Mode>rw</Mode>
+        </Volume>
+    </Data>
+    <Environment/>
+    <Labels/>
+    <Config Name="Config File" Target="/src/config.ini" Default="/mnt/user/appdata/speedtest-influxdb/config.ini" Mode="rw" Description="Download the config.ini file from https://github.com/unriad-stuff/Plex-Data-Collector-For-InfluxDB/blob/master/config.ini and copy it to /mnt/user/appdata/plex-collector-influxdb/config.ini&#13;&#10;COPY THE FILE BEFORE YOU START THE CONTAINER. IF YOU DON'T AN EMPTY DIRECTORY WILL BE CREATED INSTEAD." Type="Path" Display="always" Required="true" Mask="false"> mnt/user/appdata/plex-collector-influxdb/config.ini</Config>
+</Container>
