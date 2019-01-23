@@ -20,7 +20,7 @@
   <DateInstalled>1548204064</DateInstalled>
   <DonateText/>
   <DonateLink/>
-  <Description/>
+  <Description>Docker wrapper for a python script to query apcupsd via a python version of apcaccess, it then sends the data to influxdb.</Description>
   <Networking>
     <Mode>bridge</Mode>
     <Publish/>
