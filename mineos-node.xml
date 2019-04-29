@@ -23,7 +23,7 @@ DEFAULT PASSWORD: mypass[br]&#xD;
 [b]25565-25575[/b] Minecraft server ports, by default you can have 10 servers. If you need more you will have to add more port bindings.[br]&#xD;
 [b]Environment Variables:[/b][br]&#xD;
 [b]USER_PASSWORD[/b] Password for the web admin interface</Overview>
-  <Category>MediaServer:Other</Category>
+  <Category>GameServers:</Category>
   <WebUI>https://[IP]:[PORT:8443]</WebUI>
   <TemplateURL>https://github.com/atribe/unRAID-docker/blob/master/mineos-node.xml</TemplateURL>
   <Icon>http://i.imgur.com/P6RRtHH.png</Icon>
