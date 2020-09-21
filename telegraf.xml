@@ -6,6 +6,7 @@
   <Network>host</Network>
   <Privileged>true</Privileged>
   <Support>https://lime-technology.com/forum/index.php?topic=51498.0</Support>
+  <Project>https://github.com/influxdata/telegraf</Project>
   <Overview>&#xD;
     Telegraf gathers metrics from your system and sends them to an InfluxDB server for storage. From InfluxDB you would typically use something like Grafana to plot the data.[br]&#xD;
     Both Grafana and Influxdb are available through Community Apps[br]&#xD;
@@ -18,6 +19,7 @@
     [b]Container Volumes:[/b][br]&#xD;
     [b]/var/run/docker.sock[/b] Read Only. Location of your docker socket.[br]&#xD;
     [b]/var/run/utmp[/b] Read Only. Location of your utmp file.[br]&#xD;
+    [b]/run/udev[/b] Read Only. Allows you to identify devices based on their properties, like vendor ID and device ID[br]
     [b]/rootfs[/b] Read Only. To be mapped to the root of the host file system. This is so the disk usage reported will be that of the host system.[br]&#xD;
     [b]/rootfs/etc[/b] Read Only. To be mapped to the etc of the host file system. This is so the disk usage reported will be that of the host system.[br]&#xD;
     [b]/rootfs/proc[/b] Read Only. To be mapped to the proc of the host file system. This is so the disk usage reported will be that of the host system.[br]&#xD;
@@ -30,106 +32,18 @@
     [b]HOST_SYS[/b] Name of the sys volume mapping of the root file sytem.[br]&#xD;
   </Overview>
   <Category>Tools:</Category>
-  <WebUI/>
   <TemplateURL>https://github.com/atribe/unRAID-docker/blob/master/telegraf.xml</TemplateURL>
   <Icon>https://github.com/atribe/unRAID-docker/raw/master/icons/telegraf.png</Icon>
-  <ExtraParams/>
-  <DateInstalled>1488244768</DateInstalled>
-  <Description>&#xD;
-    Telegraf gathers metrics from your system and sends them to an InfluxDB server for storage. From InfluxDB you would typically use something like Grafana to plot the data.[br]&#xD;
-    Both Grafana and Influxdb are available through Community Apps[br]&#xD;
-    [br]&#xD;
-    [b][span style='color: #E80000;']This version of telegraf requires you to manually place a config file at /mnt/user/appdata/telegraf/telegraf.conf[/span][/b] The container will not start without it.[br]&#xD;
-    [br]&#xD;
-    The default telegraf.conf file can be downloaded at [u]https://github.com/influxdata/telegraf/blob/master/etc/telegraf.conf[/u]. If you would prefer not to use a config file you can search for untelegraf in community apps for a version that only uses environment variables.[br]&#xD;
-    [br]&#xD;
-    [b][u][span style='color: #E80000;']Configuration[/span][/u][/b][br]&#xD;
-    [b]Container Volumes:[/b][br]&#xD;
-    [b]/var/run/docker.sock[/b] Read Only. Location of your docker socket.[br]&#xD;
-    [b]/var/run/utmp[/b] Read Only. Location of your utmp file.[br]&#xD;
-    [b]/rootfs[/b] Read Only. To be mapped to the root of the host file system. This is so the disk usage reported will be that of the host system.[br]&#xD;
-    [b]/rootfs/etc[/b] Read Only. To be mapped to the etc of the host file system. This is so the disk usage reported will be that of the host system.[br]&#xD;
-    [b]/rootfs/proc[/b] Read Only. To be mapped to the proc of the host file system. This is so the disk usage reported will be that of the host system.[br]&#xD;
-    [b]/rootfs/sys[/b] Read Only. To be mapped to the sys of the host file system. This is so the disk usage reported will be that of the host system.[br]&#xD;
-    [br]&#xD;
-    [b]Environment Variables:[/b][br]&#xD;
-    [b]HOST_MOUNT_PREFIX[/b] Name of container volume mapping of the root file system.[br]&#xD;
-    [b]HOST_ETC[/b] Name of the etc volume mapping of the root file system.[br]&#xD;
-    [b]HOST_PROC[/b] Name of the proc volume mapping of the root file system.[br]&#xD;
-    [b]HOST_SYS[/b] Name of the sys volume mapping of the root file sytem.[br]&#xD;
-  </Description>
-  <Networking>
-    <Mode>host</Mode>
-    <Publish/>
-  </Networking>
-  <Data>
-    <Volume>
-      <HostDir>/var/run/utmp</HostDir>
-      <ContainerDir>/var/run/utmp</ContainerDir>
-      <Mode>ro</Mode>
-    </Volume>
-    <Volume>
-      <HostDir>/var/run/docker.sock</HostDir>
-      <ContainerDir>/var/run/docker.sock</ContainerDir>
-      <Mode>ro</Mode>
-    </Volume>
-    <Volume>
-      <HostDir>/</HostDir>
-      <ContainerDir>/rootfs</ContainerDir>
-      <Mode>ro</Mode>
-    </Volume>
-    <Volume>
-      <HostDir>/sys</HostDir>
-      <ContainerDir>/rootfs/sys</ContainerDir>
-      <Mode>ro</Mode>
-    </Volume>
-    <Volume>
-      <HostDir>/etc</HostDir>
-      <ContainerDir>/rootfs/etc</ContainerDir>
-      <Mode>ro</Mode>
-    </Volume>
-    <Volume>
-      <HostDir>/proc</HostDir>
-      <ContainerDir>/rootfs/proc</ContainerDir>
-      <Mode>ro</Mode>
-    </Volume>
-    <Volume>
-      <HostDir>/mnt/user/appdata/telegraf/telegraf.conf</HostDir>
-      <ContainerDir>/etc/telegraf/telegraf.conf</ContainerDir>
-      <Mode>rw</Mode>
-    </Volume>
-  </Data>
-  <Environment>
-    <Variable>
-      <Value>/rootfs/proc</Value>
-      <Name>HOST_PROC</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
-      <Value>/rootfs/sys</Value>
-      <Name>HOST_SYS</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
-      <Value>/rootfs/etc</Value>
-      <Name>HOST_ETC</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
-      <Value>/rootfs</Value>
-      <Name>HOST_MOUNT_PREFIX</Name>
-      <Mode/>
-    </Variable>
-  </Environment>
-  <Config Name="Host Path 1" Target="/var/run/utmp" Default="/var/run/utmp" Mode="ro" Description="Container Path: /var/run/utmp" Type="Path" Display="always" Required="true" Mask="false">/var/run/utmp</Config>
-  <Config Name="Host Path 2" Target="/var/run/docker.sock" Default="/var/run/docker.sock" Mode="ro" Description="Container Path: /var/run/docker.sock" Type="Path" Display="always" Required="true" Mask="false">/var/run/docker.sock</Config>
-  <Config Name="Host Path 3" Target="/rootfs" Default="/" Mode="ro" Description="Container Path: /rootfs" Type="Path" Display="always" Required="true" Mask="false">/</Config>
-  <Config Name="Host Path 4" Target="/rootfs/sys" Default="/sys" Mode="ro" Description="Container Path: /rootfs/sys" Type="Path" Display="always" Required="true" Mask="false">/sys</Config>
-  <Config Name="Host Path 5" Target="/rootfs/etc" Default="/etc" Mode="ro" Description="Container Path: /rootfs/etc" Type="Path" Display="always" Required="true" Mask="false">/etc</Config>
-  <Config Name="Host Path 6" Target="/rootfs/proc" Default="/proc" Mode="ro" Description="Container Path: /rootfs/proc" Type="Path" Display="always" Required="true" Mask="false">/proc</Config>
-  <Config Name="Host Path 7" Target="/etc/telegraf/telegraf.conf" Default="/mnt/user/appdata/telegraf/telegraf.conf" Mode="rw" Description="Container Path: /etc/telegraf/telegraf.conf" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/telegraf/telegraf.conf</Config>
-  <Config Name="Key 1" Target="HOST_PROC" Default="/rootfs/proc" Mode="" Description="Container Variable: HOST_PROC" Type="Variable" Display="always" Required="false" Mask="false">/rootfs/proc</Config>
-  <Config Name="Key 2" Target="HOST_SYS" Default="/rootfs/sys" Mode="" Description="Container Variable: HOST_SYS" Type="Variable" Display="always" Required="false" Mask="false">/rootfs/sys</Config>
-  <Config Name="Key 3" Target="HOST_ETC" Default="/rootfs/etc" Mode="" Description="Container Variable: HOST_ETC" Type="Variable" Display="always" Required="false" Mask="false">/rootfs/etc</Config>
-  <Config Name="Key 4" Target="HOST_MOUNT_PREFIX" Default="/rootfs" Mode="" Description="Container Variable: HOST_MOUNT_PREFIX" Type="Variable" Display="always" Required="false" Mask="false">/rootfs</Config>
+  <Config Name="Host Path 1" Target="/var/run/utmp" Default="/var/run/utmp" Mode="ro" Description="Container Path: /var/run/utmp" Type="Path" Display="always" Required="true" Mask="false"/>
+  <Config Name="Host Path 2" Target="/var/run/docker.sock" Default="/var/run/docker.sock" Mode="ro" Description="Container Path: /var/run/docker.sock" Type="Path" Display="always" Required="true" Mask="false"/>
+  <Config Name="Host Path 3" Target="/rootfs" Default="/" Mode="ro" Description="Container Path: /rootfs" Type="Path" Display="always" Required="true" Mask="false"/>
+  <Config Name="Host Path 4" Target="/rootfs/sys" Default="/sys" Mode="ro" Description="Container Path: /rootfs/sys" Type="Path" Display="always" Required="true" Mask="false"/>
+  <Config Name="Host Path 5" Target="/rootfs/etc" Default="/etc" Mode="ro" Description="Container Path: /rootfs/etc" Type="Path" Display="always" Required="true" Mask="false"/>
+  <Config Name="Host Path 6" Target="/rootfs/proc" Default="/proc" Mode="ro" Description="Container Path: /rootfs/proc" Type="Path" Display="always" Required="true" Mask="false"/>
+  <Config Name="Host Path 7" Target="/etc/telegraf/telegraf.conf" Default="/mnt/user/appdata/telegraf/telegraf.conf" Mode="rw" Description="Container Path: /etc/telegraf/telegraf.conf" Type="Path" Display="always" Required="true" Mask="false"/>
+  <Config Name="Host Path 8" Target="/run/udev" Default="/run/udev" Mode="ro" Description="Container Path: /run/udev" Type="Path" Display="always" Required="false" Mask="false"/>
+  <Config Name="Key 1" Target="HOST_PROC" Default="/rootfs/proc" Mode="" Description="Container Variable: HOST_PROC" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Key 2" Target="HOST_SYS" Default="/rootfs/sys" Mode="" Description="Container Variable: HOST_SYS" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Key 3" Target="HOST_ETC" Default="/rootfs/etc" Mode="" Description="Container Variable: HOST_ETC" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Key 4" Target="HOST_MOUNT_PREFIX" Default="/rootfs" Mode="" Description="Container Variable: HOST_MOUNT_PREFIX" Type="Variable" Display="always" Required="false" Mask="false"/>
 </Container>
