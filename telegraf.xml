@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>telegraf</Name>
-  <Repository>telegraf:alpine</Repository>
+  <Repository>telegraf:latest</Repository>
   <Registry>https://hub.docker.com/_/telegraf/</Registry>
   <Network>host</Network>
   <Privileged>true</Privileged>
