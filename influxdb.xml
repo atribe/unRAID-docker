@@ -48,6 +48,11 @@
       <ContainerDir>/var/lib/influxdb</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/influxdb/db2</HostDir>
+      <ContainerDir>/var/lib/influxdb2</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
   </Data>
   <WebUI>http://[IP]:[PORT:8083]/</WebUI>
   <Banner></Banner>
