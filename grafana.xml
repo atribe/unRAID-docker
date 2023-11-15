@@ -63,5 +63,5 @@
   <WebUI>http://[IP]:[PORT:3000]/</WebUI>
   <Banner></Banner>
   <Icon>https://github.com/atribe/unRAID-docker/raw/master/icons/grafana.png</Icon>
-  <ExtraParams></ExtraParams>
+  <ExtraParams>--user "$(id -u)"</ExtraParams>
 </Containers>
