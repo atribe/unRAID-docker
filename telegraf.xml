@@ -13,7 +13,8 @@
     [br]&#xD;
     [b][span style='color: #E80000;']This version of telegraf requires you to manually place a config file at /mnt/user/appdata/telegraf/telegraf.conf[/span][/b] The container will not start without it.[br]&#xD;
     [br]&#xD;
-    The default telegraf.conf file can be downloaded at [u]https://github.com/influxdata/telegraf/blob/master/etc/telegraf.conf[/u]. If you would prefer not to use a config file you can search for untelegraf in community apps for a version that only uses environment variables.[br]&#xD;
+    The default telegraf.conf file can be extracted from telegraf by running this command before you launch telegraf[br]&#xD;
+    docker run --rm telegraf telegraf config > /mnt/cache/appdata/telegraf/telegraf.conf[br]&#xD;
     [br]&#xD;
     [b][u][span style='color: #E80000;']Configuration[/span][/u][/b][br]&#xD;
     [b]Container Volumes:[/b][br]&#xD;
